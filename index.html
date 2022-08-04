@@ -7,6 +7,27 @@
 		<link rel="stylesheet" href="style.css">
 		<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.3.3/dist/echarts.min.js"></script>
 		<style>
+			.imgss1{
+				display:none
+			}
+			.imgss{
+				position: absolute;
+				bottom: 10px;
+				left:10px;
+				width: 200px;
+			}
+			.imgbu{
+				position: absolute;
+				bottom: 10px;
+				left:10px;
+				width: 80px;
+				height: 80px;
+				color: white;
+    background: #ff69ed;
+			}
+			.imgss :hover{
+				display:none
+			}
 			.page {
               width: 100%;
               font-weight: bold;
@@ -44,6 +65,8 @@
 		<title>爱的记录 贰零贰贰七夕</title>
 	</head>
 	<body style="height: 100%; margin: 0">
+		<button class = "imgbu" id="imgbu" onclick="imssu()">分享</button>
+		<img class = "imgss1" id="imgss"  src="ma.png">
 
 		<!-- 正文 -->
 		<div class="page">
@@ -90,6 +113,10 @@
                       "react": { "opacityDefault": 0.8, "opacityOnHover": 0.1 } });
     </script>
 		<script type="text/javascript">
+			function imssu(){
+				$('#imgss').removeClass('imgss1');
+				$('#imgss').addClass('imgss');
+			}
 			$(function () {
 			              $('label').click(function () {
 			                  $('.event_year>li').removeClass('current');
