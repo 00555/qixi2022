@@ -185,6 +185,7 @@
 			              {num:'3. ',day:'2022-04-29',val:'42',note:'流量:⭐️⭐️   痛感:⭐️⭐️   12点半'},
 			              {num:'4. ',day:'2022-06-18',val:'50',note:'流量:⭐️⭐️   痛感:⭐️⭐️   15点半 做了运动来的'},
 			              {num:'5. ',day:'2022-08-01',val:'44',note:'流量:⭐️⭐️⭐️ 痛感:⭐️⭐️⭐️  12点半 吃完午饭来的,当天下午很痛,凌晨3 4点也痛'},
+										{num:'6. ',day:'2022-09-18',val:'48',note:'17点半'},
 			            ]}
 			          ]
 			          var a = $(document);
@@ -314,7 +315,7 @@
 			          function timeElapse(lastday,avgday){
 
 			            var nextDay = new Date(lastday);
-			            nextDay.setDate(nextDay.getDate() + avgday);
+			            nextDay.setDate(nextDay.getDate() + Math.ceil(avgday));
 			            var infoDay = new Date(lastday);
 			            infoDay.setDate(infoDay.getDate() + avgday - 7);
 
